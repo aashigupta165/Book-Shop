@@ -15,12 +15,12 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
-	
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private static final String query = "INSERT INTO book(NAME, EDITION, PRICE) VALUES(?,?,?)";
 
 	@Override
@@ -61,7 +61,7 @@ public class RegisterServlet extends HttpServlet {
 			printWriter.println("<h1>"+e.getMessage()+"</h1>");
 		}
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req,resp);
