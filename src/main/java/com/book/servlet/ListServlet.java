@@ -49,7 +49,7 @@ public class ListServlet extends HttpServlet {
 		try (Connection connection = DriverManager.getConnection("jdbc:mysql:///book_shop", "root", "root");
 				PreparedStatement preparedStatement = connection.prepareStatement(query);) {
 			ResultSet resultset = preparedStatement.executeQuery();
-			printWriter.println("<table>");
+			printWriter.println("<table border='1' align='center'>");
 			printWriter.println("<tr>");
 			printWriter.println("<th>Bood Id</th>");
 			printWriter.println("<th>Bood Name</th>");
@@ -74,6 +74,7 @@ public class ListServlet extends HttpServlet {
 			e.printStackTrace();
 			printWriter.println("<h1>"+e.getMessage()+"</h1>");
 		}
+		printWriter.println("<a href=\"home.html\">Home</a>");
 	}
 
 	/**

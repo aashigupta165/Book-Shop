@@ -60,6 +60,9 @@ public class RegisterServlet extends HttpServlet {
 			e.printStackTrace();
 			printWriter.println("<h1>"+e.getMessage()+"</h1>");
 		}
+		printWriter.println("<a href=\"home.html\">Home</a>");
+		printWriter.println("<br>");
+		printWriter.println("<a href=\"list\">Book List</a>");
 	}
 
 	@Override
