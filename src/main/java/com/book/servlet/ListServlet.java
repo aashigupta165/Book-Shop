@@ -55,6 +55,8 @@ public class ListServlet extends HttpServlet {
 			printWriter.println("<th>Bood Name</th>");
 			printWriter.println("<th>Bood Edition</th>");
 			printWriter.println("<th>Bood Price</th>");
+			printWriter.println("<th>Edit</th>");
+			printWriter.println("<th>Delete</th>");
 			printWriter.println("</tr>");
 			while (resultset.next()) {
 				printWriter.println("<tr>");
@@ -62,6 +64,8 @@ public class ListServlet extends HttpServlet {
 				printWriter.println("<td>"+resultset.getString(2)+"</td>");
 				printWriter.println("<td>"+resultset.getString(3)+"</td>");
 				printWriter.println("<td>"+resultset.getFloat(4)+"</td>");
+				printWriter.println("<td><a href = 'edit?id='"+resultset.getInt(1)+"/a>Edit</td>");
+				printWriter.println("<td><a href = 'delete?id='"+resultset.getInt(1)+"/a>Delete</td>");
 				printWriter.println("</tr>");
 			}
 			printWriter.println("</table>");
