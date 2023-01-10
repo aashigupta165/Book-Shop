@@ -64,8 +64,8 @@ public class ListServlet extends HttpServlet {
 				printWriter.println("<td>"+resultset.getString(2)+"</td>");
 				printWriter.println("<td>"+resultset.getString(3)+"</td>");
 				printWriter.println("<td>"+resultset.getFloat(4)+"</td>");
-				printWriter.println("<td><a href = 'edit?id='"+resultset.getInt(1)+"/a>Edit</td>");
-				printWriter.println("<td><a href = 'delete?id='"+resultset.getInt(1)+"/a>Delete</td>");
+				printWriter.println("<td><a href = 'edit?id="+resultset.getInt(1)+"'>Edit</a></td>");
+				printWriter.println("<td><a href = 'delete?id="+resultset.getInt(1)+"'>Delete</a></td>");
 				printWriter.println("</tr>");
 			}
 			printWriter.println("</table>");
