@@ -49,6 +49,7 @@ public class ListServlet extends HttpServlet {
 		try (Connection connection = DriverManager.getConnection("jdbc:mysql:///book_shop", "root", "root");
 				PreparedStatement preparedStatement = connection.prepareStatement(query);) {
 			ResultSet resultset = preparedStatement.executeQuery();
+			printWriter.println("<h2 align='center'>Book List</h2>");
 			printWriter.println("<table border='1' align='center'>");
 			printWriter.println("<tr>");
 			printWriter.println("<th>Bood Id</th>");

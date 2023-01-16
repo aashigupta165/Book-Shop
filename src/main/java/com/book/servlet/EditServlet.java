@@ -52,6 +52,7 @@ public class EditServlet extends HttpServlet {
 			preparedStatement.setInt(1, id);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			resultSet.next();
+			printWriter.println("<h2 align='center'>Book Update</h2>");
 			printWriter.println("<form action='update?id="+id+"' method='post'>");
 			printWriter.println("<table align='center'>");
 			printWriter.println("<tr>");
